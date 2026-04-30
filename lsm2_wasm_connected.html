@@ -50,17 +50,13 @@
 
 <script src="lsm.js"></script>
 <script>
-/*
-  This UI mirrors the memtable and SSTables in JavaScript and also invokes
-  the compiled C++ LSM functions inside WebAssembly so the logic runs in WASM.
-  Note: the C++ module does not expose listing functions, so JS keeps the UI state.
-*/
+
 
 let putFunc = null, getFunc = null, flushFunc = null, compactFunc = null;
 
 const MEMTABLE_THRESHOLD = 4;
 let memtable = new Map();
-let sstables = []; // array of Maps
+let sstables = []; 
 
 function render() {
     const memDiv = document.getElementById("memtableContent");
