@@ -42,9 +42,3 @@ Modern databases like LevelDB and RocksDB use LSM Trees to handle large-scale da
 - High write throughput
 - Sequential disk access
 - Scalable storage design
-
-##  Future Improvements
-
-- Bloom filters for faster reads
-- Multi-level compaction strategy
-- Concurrency support
